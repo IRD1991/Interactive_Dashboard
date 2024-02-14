@@ -11,6 +11,8 @@ import plotly.express as px
 import int_dash_data_functions as funcs
 import datetime
 
+from streamlit_autorefresh import st_autorefresh
+
 #####PAGE SETTING DEFAULTS
 
 st.set_page_config(
@@ -19,6 +21,7 @@ st.set_page_config(
     layout="wide", #use entire screen
 )
 
+st_autorefresh(interval=36000000)
 
 #####LOAD DATA
 
